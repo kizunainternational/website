@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Partner Institutions in Japan | Kizuna International Education</title>
-    <meta name="description" content="Explore Kizuna's 28+ recognized partner schools, colleges, and graduate universities across Japan." />
+    <meta name="description" content="Explore Kizuna's partner Japanese language schools and colleges across Japan, each linked to its own official website." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -18,17 +18,23 @@
         <a class="brand" href="index.html" aria-label="Kizuna International Education home"><img src="assets/logo/kizuna-logo.jpeg" alt="Kizuna International Education logo" /><span>Kizuna Int'l Education <small>PVT. LTD.</small></span></a>
         <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
         <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">
-          <ul><li><a href="index.html" class="nav-link">Home</a></li><li><a href="about.html" class="nav-link">About Us</a></li><li><a href="services.html" class="nav-link">Our Services</a></li><li><a href="why-japan.html" class="nav-link">Why Japan</a></li><li><a href="partners.html" class="nav-link active">Institutions</a></li><li><a href="faq.html" class="nav-link">FAQs</a></li><li><a href="contact.html" class="nav-link">Contact Us</a></li></ul>
-          <a class="btn btn-primary nav-cta" href="contact.html">Book Consultation</a>
+          <ul>
+            <li><a href="services.html" class="nav-link">Our Services</a></li>
+            <li><a href="why-japan.html" class="nav-link">Why Japan</a></li>
+            <li><a href="partners.html" class="nav-link active">Institutions</a></li>
+            <li><a href="faq.html" class="nav-link">FAQs</a></li>
+            <li><a href="about.html" class="nav-link">About Us</a></li>
+            <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+          </ul>
         </nav>
       </div>
     </header>
     <main id="main-content">
-      <section class="page-hero">
+      <section class="page-hero h-partners">
+        <span class="hero-symbol" aria-hidden="true"></span>
         <div class="container" data-animate="fade-up">
-          <p class="eyebrow">Partner Institutions</p>
-          <h1>28+ Recognized Schools, Colleges & Universities Across Japan</h1>
-          <p>Recognized institutions formally partnered with Kizuna.</p>
+          <h1>Recognized Partner Schools &amp; Colleges Across Japan</h1>
+          <p>Real partner institutions across Japan. Tap any card to open the school's official website.</p>
         </div>
       </section>
       <section class="content-band section-pad">
@@ -42,65 +48,137 @@
       </section>
       <section class="content-band soft section-pad">
         <div class="container">
-          <div class="section-head center" data-animate="fade-up"><p class="eyebrow">Graduate Universities</p><h2>Advanced Study Pathways</h2></div>
-          <div class="table-wrap" data-animate="fade-up">
-            <table class="data-table">
-              <thead><tr><th>#</th><th>Institution</th><th>Location</th><th>Program</th><th>Duration</th></tr></thead>
-              <tbody>
-                <tr><td>1</td><td>Kobe Institute of Computing - Graduate School of Information Technology</td><td>Kobe, Japan</td><td>Master in IT / Web Business</td><td>2 Years</td></tr>
-                <tr><td>2</td><td>The Kyoto College of Graduate Studies for Informatics</td><td>Kyoto, Japan</td><td>Master in IT / Web Business</td><td>2 Years</td></tr>
-              </tbody>
-            </table>
+          <div class="section-head center" data-animate="fade-up"><p class="eyebrow">Partner Institutions</p><h2>Japanese Language Schools &amp; Colleges</h2></div>
+          <div class="institution-grid">
+            <a class="institution-card" href="https://www.asuka-gakuin.jp/" target="_blank" rel="noopener noreferrer" data-animate="fade-up">
+              <div class="institution-photo"><img src="assets/schools/asuka-gakuin.jpg" alt="Asuka Gakuin" loading="lazy" /><span class="tag">Language School</span></div>
+              <div class="institution-body"><h3>Asuka Gakuin</h3><span class="program">Japanese Language Pathway</span><span class="visit">Visit website &rarr;</span></div>
+            </a>
+            <a class="institution-card" href="http://www.tsubouchigakuen.jp/" target="_blank" rel="noopener noreferrer" data-animate="fade-up">
+              <div class="institution-photo"><img src="assets/schools/tsubouchi-gakuen.jpg" alt="Tsubouchi Gakuen" loading="lazy" /><span class="tag">Language School</span></div>
+              <div class="institution-body"><h3>Tsubouchi Gakuen</h3><span class="program">Japanese Language Pathway</span><span class="visit">Visit website &rarr;</span></div>
+            </a>
+            <a class="institution-card" href="https://www.osaka-intlacademysouth.jp/en/" target="_blank" rel="noopener noreferrer" data-animate="fade-up">
+              <div class="institution-photo"><img src="assets/schools/osaka-kokusai-academy.jpg" alt="Osaka Kokusai Academy" loading="lazy" /><span class="tag">Academy</span></div>
+              <div class="institution-body"><h3>Osaka Kokusai Academy</h3><span class="program">Japanese Language Pathway</span><span class="visit">Visit website &rarr;</span></div>
+            </a>
+            <a class="institution-card" href="https://kamei-nihongo.com/english/en-index.html" target="_blank" rel="noopener noreferrer" data-animate="fade-up">
+              <div class="institution-photo"><img src="assets/schools/kamei-gakuin-college.jpg" alt="Kamei Gakuin College" loading="lazy" /><span class="tag">College</span></div>
+              <div class="institution-body"><h3>Kamei Gakuin College</h3><span class="program">College &amp; Language Programs</span><span class="visit">Visit website &rarr;</span></div>
+            </a>
+            <a class="institution-card" href="https://www.nicc-nagano.jp/" target="_blank" rel="noopener noreferrer" data-animate="fade-up">
+              <div class="institution-photo"><img src="assets/schools/nagano-intl-culture.jpg" alt="Nagano International Culture College" loading="lazy" /><span class="tag">College</span></div>
+              <div class="institution-body"><h3>Nagano International Culture College</h3><span class="program">College &amp; Language Programs</span><span class="visit">Visit website &rarr;</span></div>
+            </a>
+            <a class="institution-card" href="https://www.int-studentshiroshima.jp/en/school/detail.php?UID=58" target="_blank" rel="noopener noreferrer" data-animate="fade-up">
+              <div class="institution-photo"><img src="assets/schools/hiroshima-academy.jpg" alt="Hiroshima Academy" loading="lazy" /><span class="tag">Academy</span></div>
+              <div class="institution-body"><h3>Hiroshima Academy</h3><span class="program">Japanese Language Pathway</span><span class="visit">Visit website &rarr;</span></div>
+            </a>
+            <a class="institution-card" href="https://www.mial.ac.jp/" target="_blank" rel="noopener noreferrer" data-animate="fade-up">
+              <div class="institution-photo"><img src="assets/schools/mihara-intl-academy.jpg" alt="Mihara International Academy of Language" loading="lazy" /><span class="tag">Academy</span></div>
+              <div class="institution-body"><h3>Mihara International Academy of Language</h3><span class="program">Japanese Language Pathway</span><span class="visit">Visit website &rarr;</span></div>
+            </a>
+            <a class="institution-card" href="https://a-ru.ac.jp/college/international/english.html" target="_blank" rel="noopener noreferrer" data-animate="fade-up">
+              <div class="institution-photo"><img src="assets/schools/ahru-college.jpg" alt="Ahru Medical Care &amp; Welfare Professional Training College" loading="lazy" /><span class="tag">College</span></div>
+              <div class="institution-body"><h3>Ahru Medical Care &amp; Welfare Professional Training College</h3><span class="program">College &amp; Language Programs</span><span class="visit">Visit website &rarr;</span></div>
+            </a>
+            <a class="institution-card" href="https://ah-jls.com/en/introduction/arms/" target="_blank" rel="noopener noreferrer" data-animate="fade-up">
+              <div class="institution-photo"><img src="assets/schools/arms-jls.jpg" alt="ARMS Japanese Language School" loading="lazy" /><span class="tag">Language School</span></div>
+              <div class="institution-body"><h3>ARMS Japanese Language School</h3><span class="program">Japanese Language Pathway</span><span class="visit">Visit website &rarr;</span></div>
+            </a>
+            <a class="institution-card" href="https://ah-jls.com/en/" target="_blank" rel="noopener noreferrer" data-animate="fade-up">
+              <div class="institution-photo"><img src="assets/schools/ha-jls.jpg" alt="H&amp;A Japanese Language School" loading="lazy" /><span class="tag">Language School</span></div>
+              <div class="institution-body"><h3>H&amp;A Japanese Language School</h3><span class="program">Japanese Language Pathway</span><span class="visit">Visit website &rarr;</span></div>
+            </a>
+            <a class="institution-card" href="https://jvca-osaka.jp/" target="_blank" rel="noopener noreferrer" data-animate="fade-up">
+              <div class="institution-photo"><img src="assets/schools/jvc-academy.jpg" alt="JVC Academy" loading="lazy" /><span class="tag">Academy</span></div>
+              <div class="institution-body"><h3>JVC Academy</h3><span class="program">Japanese Language Pathway</span><span class="visit">Visit website &rarr;</span></div>
+            </a>
+            <a class="institution-card" href="https://khakideer1.sakura.ne.jp/kobe-world-academy/en-top/" target="_blank" rel="noopener noreferrer" data-animate="fade-up">
+              <div class="institution-photo"><img src="assets/schools/kobe-world-academy.jpg" alt="Kobe World Academy" loading="lazy" /><span class="tag">Academy</span></div>
+              <div class="institution-body"><h3>Kobe World Academy</h3><span class="program">Japanese Language Pathway</span><span class="visit">Visit website &rarr;</span></div>
+            </a>
+            <a class="institution-card" href="https://www.kobe-kg.jp/en/" target="_blank" rel="noopener noreferrer" data-animate="fade-up">
+              <div class="institution-photo"><img src="assets/schools/kobe-intl-language.jpg" alt="Kobe International Language School" loading="lazy" /><span class="tag">Language School</span></div>
+              <div class="institution-body"><h3>Kobe International Language School</h3><span class="program">Japanese Language Pathway</span><span class="visit">Visit website &rarr;</span></div>
+            </a>
+            <a class="institution-card" href="https://aim-nara.ac/" target="_blank" rel="noopener noreferrer" data-animate="fade-up">
+              <div class="institution-photo"><img src="assets/schools/aim-nara.jpg" alt="AIM Nara International Academy" loading="lazy" /><span class="tag">Academy</span></div>
+              <div class="institution-body"><h3>AIM Nara International Academy</h3><span class="program">Japanese Language Pathway</span><span class="visit">Visit website &rarr;</span></div>
+            </a>
+            <a class="institution-card" href="https://www.nisshinkyo.org/search/college.php?id=262&amp;lng=2" target="_blank" rel="noopener noreferrer" data-animate="fade-up">
+              <div class="institution-photo"><img src="assets/schools/alice-intl-college.jpg" alt="ALICE International College" loading="lazy" /><span class="tag">College</span></div>
+              <div class="institution-body"><h3>ALICE International College</h3><span class="program">College &amp; Language Programs</span><span class="visit">Visit website &rarr;</span></div>
+            </a>
+            <a class="institution-card" href="https://www.jitbc.jp/%E5%AD%A6%E6%A0%A1%E6%A1%88%E5%86%85/%E3%82%AB%E3%83%AA%E3%82%AD%E3%83%A5%E3%83%A9%E3%83%A0" target="_blank" rel="noopener noreferrer" data-animate="fade-up">
+              <div class="institution-photo"><img src="assets/schools/japan-it-business.jpg" alt="Japan IT Business College" loading="lazy" /><span class="tag">College</span></div>
+              <div class="institution-body"><h3>Japan IT Business College</h3><span class="program">College &amp; Language Programs</span><span class="visit">Visit website &rarr;</span></div>
+            </a>
+            <a class="institution-card" href="https://gagonline10.wixsite.com/gag-japanese-languag" target="_blank" rel="noopener noreferrer" data-animate="fade-up">
+              <div class="institution-photo"><img src="assets/schools/gag-jli.jpg" alt="GAG Japanese Language Institute" loading="lazy" /><span class="tag">Institute</span></div>
+              <div class="institution-body"><h3>GAG Japanese Language Institute</h3><span class="program">Japanese Language Pathway</span><span class="visit">Visit website &rarr;</span></div>
+            </a>
+            <a class="institution-card" href="https://osaka-minami.com/" target="_blank" rel="noopener noreferrer" data-animate="fade-up">
+              <div class="institution-photo"><img src="assets/schools/minami-osaka-jli.jpg" alt="Minami Osaka Japanese Language Institute" loading="lazy" /><span class="tag">Institute</span></div>
+              <div class="institution-body"><h3>Minami Osaka Japanese Language Institute</h3><span class="program">Japanese Language Pathway</span><span class="visit">Visit website &rarr;</span></div>
+            </a>
+            <a class="institution-card" href="https://nissei.ac/en/" target="_blank" rel="noopener noreferrer" data-animate="fade-up">
+              <div class="institution-photo"><img src="assets/schools/nissei-jls.jpg" alt="Nissei Japanese Language School" loading="lazy" /><span class="tag">Language School</span></div>
+              <div class="institution-body"><h3>Nissei Japanese Language School</h3><span class="program">Japanese Language Pathway</span><span class="visit">Visit website &rarr;</span></div>
+            </a>
+            <a class="institution-card" href="https://www.gk-jls.com/" target="_blank" rel="noopener noreferrer" data-animate="fade-up">
+              <div class="institution-photo"><img src="assets/schools/gk-jls.jpg" alt="GK Japanese Language School" loading="lazy" /><span class="tag">Language School</span></div>
+              <div class="institution-body"><h3>GK Japanese Language School</h3><span class="program">Japanese Language Pathway</span><span class="visit">Visit website &rarr;</span></div>
+            </a>
+            <a class="institution-card" href="https://www.okinawajcs.com/english/index.html" target="_blank" rel="noopener noreferrer" data-animate="fade-up">
+              <div class="institution-photo"><img src="assets/schools/okinawa-jcs.jpg" alt="Okinawa JCS Academy" loading="lazy" /><span class="tag">Academy</span></div>
+              <div class="institution-body"><h3>Okinawa JCS Academy</h3><span class="program">Japanese Language Pathway</span><span class="visit">Visit website &rarr;</span></div>
+            </a>
+            <a class="institution-card" href="https://en.toyamaia.com/" target="_blank" rel="noopener noreferrer" data-animate="fade-up">
+              <div class="institution-photo"><img src="assets/schools/toyama-intl-language.jpg" alt="Toyama International Language School" loading="lazy" /><span class="tag">Language School</span></div>
+              <div class="institution-body"><h3>Toyama International Language School</h3><span class="program">Japanese Language Pathway</span><span class="visit">Visit website &rarr;</span></div>
+            </a>
+            <a class="institution-card" href="https://kagura-kobe.jp/en/" target="_blank" rel="noopener noreferrer" data-animate="fade-up">
+              <div class="institution-photo"><img src="assets/schools/kagura-jls.jpg" alt="Kagura Japanese Language School" loading="lazy" /><span class="tag">Language School</span></div>
+              <div class="institution-body"><h3>Kagura Japanese Language School</h3><span class="program">Japanese Language Pathway</span><span class="visit">Visit website &rarr;</span></div>
+            </a>
+            <a class="institution-card" href="https://www.usuijls.com/en" target="_blank" rel="noopener noreferrer" data-animate="fade-up">
+              <div class="institution-photo"><img src="assets/schools/usui-jls.jpg" alt="USUI Japanese Language School" loading="lazy" /><span class="tag">Language School</span></div>
+              <div class="institution-body"><h3>USUI Japanese Language School</h3><span class="program">Japanese Language Pathway</span><span class="visit">Visit website &rarr;</span></div>
+            </a>
+            <a class="institution-card" href="https://go3h.com/index.html" target="_blank" rel="noopener noreferrer" data-animate="fade-up">
+              <div class="institution-photo"><img src="assets/schools/threeh-jls.jpg" alt="3H Japanese Language School" loading="lazy" /><span class="tag">Language School</span></div>
+              <div class="institution-body"><h3>3H Japanese Language School</h3><span class="program">Japanese Language Pathway</span><span class="visit">Visit website &rarr;</span></div>
+            </a>
+            <a class="institution-card" href="https://www.o-hara.ac.jp/japanese/en/namba/" target="_blank" rel="noopener noreferrer" data-animate="fade-up">
+              <div class="institution-photo"><img src="assets/schools/ohara-namba.jpg" alt="O-Hara Namba Campus" loading="lazy" /><span class="tag">Language School</span></div>
+              <div class="institution-body"><h3>O-Hara Namba Campus</h3><span class="program">Japanese Language Pathway</span><span class="visit">Visit website &rarr;</span></div>
+            </a>
           </div>
-        </div>
-      </section>
-      <section class="content-band section-pad">
-        <div class="container">
-          <div class="section-head center" data-animate="fade-up"><p class="eyebrow">Language Schools & Colleges</p><h2>Japanese Language Pathways</h2></div>
-          <div class="table-wrap" data-animate="fade-up">
-            <table class="data-table">
-              <thead><tr><th>#</th><th>Institution</th><th>Location</th><th>Focus</th><th>Duration</th></tr></thead>
-              <tbody>
-                <tr><td>3</td><td>Asuka Gakuin</td><td>Yokohama</td><td>Japanese Language</td><td>2 Years</td></tr>
-                <tr><td>4</td><td>Tsubouchi Gakuen</td><td>Shimane</td><td>Japanese Language</td><td>2 Years</td></tr>
-                <tr><td>5</td><td>Osaka Kokusai Academy</td><td>Osaka</td><td>Japanese Language</td><td>2 Years</td></tr>
-                <tr><td>6</td><td>Kamei Gakuin College</td><td>Osaka</td><td>Japanese Language</td><td>2 Years</td></tr>
-                <tr><td>7</td><td>Nagano International Culture College</td><td>Nagano</td><td>Japanese Language</td><td>2 Years</td></tr>
-                <tr><td>8</td><td>Hiroshima Academy</td><td>Hiroshima</td><td>Japanese Language</td><td>2 Years</td></tr>
-                <tr><td>9</td><td>Mihara International Academy of Language</td><td>Hiroshima</td><td>Japanese Language</td><td>2 Years</td></tr>
-                <tr><td>10</td><td>Ahru Medical Care and Welfare Professional Training College</td><td>Ibaraki, Tokyo</td><td>Japanese Language</td><td>2 Years</td></tr>
-                <tr><td>11</td><td>ARMS Japanese Language School</td><td>Aichi, Nagoya</td><td>Japanese Language</td><td>2 Years</td></tr>
-                <tr><td>12</td><td>H&amp;A Japanese Language School</td><td>Nagoya</td><td>Japanese Language</td><td>2 Years</td></tr>
-                <tr><td>13</td><td>JVC Academy</td><td>Osaka City</td><td>Japanese Language</td><td>2 Years</td></tr>
-                <tr><td>14</td><td>Kobe World Academy</td><td>Kobe City, Hyogo</td><td>Japanese Language</td><td>2 Years</td></tr>
-                <tr><td>15</td><td>Kobe International Language School</td><td>Nishinoyama, Hyogo</td><td>Japanese Language</td><td>2 Years</td></tr>
-                <tr><td>16</td><td>AIM Nara International Academy</td><td>Nara</td><td>Japanese Language</td><td>2 Years</td></tr>
-                <tr><td>17</td><td>ALICE International College</td><td>Kanazawa, Ishikawa</td><td>Japanese Language</td><td>2 Years</td></tr>
-                <tr><td>18</td><td>Japan IT Business College</td><td>Okayama</td><td>Japanese Language</td><td>2 Years</td></tr>
-                <tr><td>19</td><td>GAG Japanese Language Institute</td><td>Fukuoka</td><td>Japanese Language</td><td>2 Years</td></tr>
-                <tr><td>20</td><td>Minami Osaka Japanese Language Institute</td><td>Osaka City</td><td>Japanese Language</td><td>2 Years</td></tr>
-                <tr><td>21</td><td>Nissei Japanese Language School</td><td>Osaka City</td><td>Japanese Language</td><td>2 Years</td></tr>
-                <tr><td>22</td><td>GK Japanese Language School</td><td>Osaka City</td><td>Japanese Language</td><td>2 Years</td></tr>
-                <tr><td>23</td><td>JCS Academy</td><td>Okinawa</td><td>Japanese Language</td><td>2 Years</td></tr>
-                <tr><td>24</td><td>Toyama International Language School</td><td>Toyama City</td><td>Japanese Language</td><td>2 Years</td></tr>
-                <tr><td>25</td><td>Kagura Japanese Language School</td><td>Kobe</td><td>Japanese Language</td><td>2 Years</td></tr>
-                <tr><td>26</td><td>USUI Japanese Language School</td><td>Chiba</td><td>Japanese Language</td><td>2 Years</td></tr>
-                <tr><td>27</td><td>3H Japanese Language School</td><td>Chiba</td><td>Japanese Language</td><td>2 Years</td></tr>
-                <tr><td>28</td><td>Namba Campus</td><td>Osaka</td><td>Japanese Language</td><td>2 Years</td></tr>
-              </tbody>
-            </table>
-          </div>
+          <p class="section-note" data-animate="fade-up">Each photo is the institution's own; tap a card to open its official website. Graduate study pathways &mdash; including the Kobe Institute of Computing and the Kyoto College of Graduate Studies for Informatics &mdash; are also available; ask our counsellors for details.</p>
         </div>
       </section>
     </main>
+
+    <div class="floating-contact" aria-label="Quick contact">
+      <a class="fab fab-whatsapp" href="https://wa.me/9779851167689" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+        <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.004 5.333c-5.887 0-10.667 4.78-10.667 10.667 0 1.88.494 3.71 1.43 5.32L5.333 26.667l5.49-1.44a10.62 10.62 0 0 0 5.18 1.32h.004c5.886 0 10.666-4.78 10.666-10.667 0-2.85-1.11-5.53-3.125-7.545a10.6 10.6 0 0 0-7.545-3.002zm0 19.2h-.003a8.84 8.84 0 0 1-4.503-1.233l-.323-.192-3.258.854.87-3.176-.21-.326a8.83 8.83 0 0 1-1.353-4.7c0-4.892 3.98-8.87 8.876-8.87a8.8 8.8 0 0 1 6.27 2.6 8.8 8.8 0 0 1 2.597 6.276c0 4.893-3.98 8.872-8.876 8.872zm4.867-6.64c-.267-.134-1.578-.778-1.823-.867-.244-.089-.422-.133-.6.134-.178.266-.689.866-.845 1.044-.155.178-.311.2-.578.067-.267-.134-1.126-.415-2.145-1.323-.793-.707-1.328-1.58-1.484-1.847-.155-.267-.016-.41.117-.544.12-.12.267-.31.4-.466.134-.156.178-.267.267-.445.089-.178.045-.334-.022-.467-.067-.134-.6-1.446-.822-1.98-.216-.52-.436-.45-.6-.458l-.511-.009c-.178 0-.467.067-.711.334-.245.266-.934.912-.934 2.224 0 1.311.956 2.578 1.09 2.756.133.178 1.88 2.872 4.556 4.027.636.275 1.133.439 1.52.561.639.203 1.22.174 1.68.106.512-.077 1.578-.645 1.8-1.267.222-.623.222-1.156.155-1.267-.066-.111-.244-.178-.511-.311z"/></svg>
+        <span class="fab-label">WhatsApp</span>
+      </a>
+      <a class="fab fab-email" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=info@kizunainternational.edu.np&amp;su=Study%20in%20Japan%20Inquiry" target="_blank" rel="noopener noreferrer" aria-label="Email us on Gmail">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        <span class="fab-label">Email Us</span>
+      </a>
+    </div>
+
     <footer class="site-footer">
       <div class="container footer-grid">
         <div><a class="brand footer-brand" href="index.html" aria-label="Kizuna home"><img src="assets/logo/kizuna-logo.jpeg" alt="Kizuna logo" /><span>Kizuna Int'l Education <small>PVT. LTD.</small></span></a><p>Trusted guidance for students who want to study in Japan with confidence.</p></div>
-        <div><h3>Quick Links</h3><ul><li><a href="about.html">About Us</a></li><li><a href="services.html">Our Services</a></li><li><a href="why-japan.html">Why Japan</a></li><li><a href="partners.html">Partner Institutions</a></li><li><a href="eligibility.html">Eligibility</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+        <div><h3>Quick Links</h3><ul><li><a href="services.html">Our Services</a></li><li><a href="why-japan.html">Why Japan</a></li><li><a href="partners.html">Institutions</a></li><li><a href="faq.html">FAQs</a></li><li><a href="about.html">About Us</a></li><li><a href="eligibility.html">Eligibility</a></li></ul></div>
         <div><h3>Services</h3><ul><li>Free Educational Counselling</li><li>Japanese Language Classes</li><li>Admission Processing</li><li>Visa Guidance</li><li>Post-Arrival Support</li></ul></div>
         <div><h3>Contact Us</h3><ul><li>01-4578939 | 9851167689</li><li><a href="mailto:info@kizunainternational.edu.np">info@kizunainternational.edu.np</a></li><li>New Baneshwor-10, Kathmandu, Nepal</li></ul><div class="social-row" aria-label="Social links"><a href="https://www.facebook.com/kizunakathmandu" target="_blank" rel="noopener noreferrer">f</a></div></div>
       </div>
-      <div class="copyright"><div class="container copyright-row"><p>Copyright <span data-current-year>2026</span> Kizuna International Education. All rights reserved.</p><p>Privacy Policy | Terms & Conditions</p></div></div>
+      <div class="copyright"><div class="container copyright-row"><p>Copyright <span data-current-year>2026</span> Kizuna International Education. All rights reserved.</p><p>Privacy Policy | Terms &amp; Conditions</p></div></div>
     </footer>
     <script src="js/script.js"></script>
   </body>
