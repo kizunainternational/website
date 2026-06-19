@@ -204,12 +204,6 @@ p {
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background var(--transition);
 }
 
-.btn::after {
-  content: ">";
-  font-size: 1.05rem;
-  line-height: 1;
-}
-
 .btn:hover {
   transform: translateY(-2px);
 }
@@ -283,36 +277,42 @@ p {
   position: relative;
   overflow: hidden;
   padding: 86px 0 76px;
-  background: linear-gradient(90deg, #fff 0%, #fbf8ff 58%, #f7effc 100%);
+  background: #20102e;
 }
 
 .hero::before,
 .page-hero::before {
   content: "";
   position: absolute;
-  top: 50%;
-  right: max(1rem, calc((100vw - 1130px) / 2));
-  width: min(340px, 32vw);
-  aspect-ratio: 1;
-  background: url("../assets/logo/kizuna-logo.jpeg") center / contain no-repeat;
-  mix-blend-mode: multiply;
-  opacity: 0.1;
-  transform: translateY(-50%);
+  inset: 0;
+  z-index: 0;
+  background-image: url("../assets/heritage/home.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   pointer-events: none;
+  animation: heroPhotoIn 1.2s ease both;
 }
+
+/* Per-page heritage hero image */
+.h-home::before { background-image: url("../assets/heritage/home.jpg"); }
+.h-about::before { background-image: url("../assets/heritage/about.jpg"); }
+.h-services::before { background-image: url("../assets/heritage/services.jpg"); }
+.h-whyjapan::before { background-image: url("../assets/heritage/why-japan.jpg"); }
+.h-partners::before { background-image: url("../assets/heritage/partners.jpg"); }
+.h-faq::before { background-image: url("../assets/heritage/faq.jpg"); }
+.h-contact::before { background-image: url("../assets/heritage/contact.jpg"); }
+.h-eligibility::before { background-image: url("../assets/heritage/eligibility.jpg"); }
+.h-stories::before { background-image: url("../assets/heritage/stories.jpg"); }
 
 .hero::after,
 .page-hero::after {
   content: "";
   position: absolute;
-  right: -8%;
-  bottom: -60px;
-  width: 72%;
-  height: 120px;
-  border-top: 5px solid var(--accent);
-  border-radius: 100% 0 0 0;
-  background: var(--primary);
-  transform: skewY(-7deg);
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(90deg, rgba(20, 9, 38, 0.74) 0%, rgba(20, 9, 38, 0.5) 32%, rgba(20, 9, 38, 0.16) 60%, rgba(20, 9, 38, 0.04) 100%);
+  pointer-events: none;
 }
 
 .hero-grid {
@@ -337,15 +337,17 @@ p {
 .hero h1 {
   max-width: 720px;
   margin-bottom: 1rem;
-  color: var(--primary);
+  color: #fff;
   font-size: clamp(2.25rem, 5vw, 4rem);
   font-weight: 800;
+  text-shadow: 0 2px 18px rgba(10, 4, 22, 0.4);
 }
 
 .hero-content > p:not(.eyebrow) {
   max-width: 620px;
   margin-top: 1rem;
-  color: #4e4859;
+  color: rgba(255, 255, 255, 0.94);
+  text-shadow: 0 1px 12px rgba(10, 4, 22, 0.45);
   font-size: 1.05rem;
 }
 
@@ -697,7 +699,7 @@ p {
 
 .trust-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -1188,6 +1190,15 @@ p {
   border: 0;
 }
 
+.contact-map-top {
+  margin-bottom: 1.4rem;
+}
+
+.contact-map-top .map-frame,
+.contact-map-top .map-frame iframe {
+  height: clamp(260px, 38vh, 380px);
+}
+
 .map-frame:focus-visible {
   outline: 2px solid var(--primary);
   outline-offset: 3px;
@@ -1321,15 +1332,17 @@ p {
 
 .page-hero h1 {
   max-width: 720px;
-  color: var(--primary);
+  color: #fff;
   font-size: clamp(2.25rem, 5vw, 4rem);
   font-weight: 800;
+  text-shadow: 0 2px 18px rgba(10, 4, 22, 0.4);
 }
 
 .page-hero p:not(.eyebrow) {
   max-width: 620px;
   margin-top: 1rem;
-  color: #4e4859;
+  color: rgba(255, 255, 255, 0.94);
+  text-shadow: 0 1px 12px rgba(10, 4, 22, 0.45);
   font-size: 1.05rem;
 }
 
@@ -1786,11 +1799,9 @@ p {
     justify-self: start;
   }
 
-  .hero::before,
-  .page-hero::before {
-    right: -40px;
-    width: 260px;
-    opacity: 0.07;
+  .hero::after,
+  .page-hero::after {
+    background: linear-gradient(180deg, rgba(20, 9, 38, 0.48) 0%, rgba(20, 9, 38, 0.64) 58%, rgba(20, 9, 38, 0.76) 100%);
   }
 
   .hero::after,
@@ -1933,5 +1944,390 @@ p {
   *::after {
     transition: none !important;
     animation: none !important;
+  }
+}
+
+/* ============================================================
+   Heritage hero photo + Japanese cultural symbol
+   ============================================================ */
+.hero,
+.page-hero {
+  isolation: isolate;
+}
+
+.hero-symbol {
+  position: absolute;
+  z-index: 2;
+  top: 18%;
+  right: clamp(1rem, 8vw, 7rem);
+  width: clamp(64px, 9vw, 116px);
+  aspect-ratio: 1;
+  background: url("../assets/heritage/sakura.svg") center / contain no-repeat;
+  filter: drop-shadow(0 8px 18px rgba(79, 30, 134, 0.18));
+  opacity: 0.92;
+  pointer-events: none;
+  animation: floatSpin 9s ease-in-out infinite;
+}
+
+.hero-symbol.alt {
+  top: auto;
+  bottom: 16%;
+  right: auto;
+  left: clamp(1rem, 6vw, 5rem);
+  width: clamp(46px, 6vw, 78px);
+  opacity: 0.7;
+  animation-duration: 12s;
+  animation-direction: reverse;
+}
+
+@keyframes heroPhotoIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes floatSpin {
+  0%   { transform: translateY(0) rotate(0deg); }
+  50%  { transform: translateY(-16px) rotate(20deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* ============================================================
+   Our Partners — recycling logo marquee (right to left)
+   ============================================================ */
+.partners-marquee {
+  background: linear-gradient(180deg, #fff 0%, var(--surface-soft) 100%);
+}
+
+.partners-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.8rem;
+}
+
+.partners-bar .see-more {
+  order: -1;
+}
+
+.marquee {
+  position: relative;
+  overflow: hidden;
+  padding: 0.6rem 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 1.1rem;
+  animation: marquee 34s linear infinite;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.partner-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 0 0 auto;
+  width: 258px;
+  min-height: 88px;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.partner-logo img {
+  flex: 0 0 auto;
+  width: 66px;
+  height: 66px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: var(--surface-soft);
+}
+
+.partner-logo:hover {
+  transform: translateY(-4px);
+  border-color: #d6c3e6;
+  box-shadow: var(--shadow);
+}
+
+.partner-logo:hover img {
+  transform: none;
+}
+
+.partner-mark {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+.partner-logo:nth-child(even) .partner-mark {
+  background: linear-gradient(135deg, var(--accent-light), var(--accent));
+}
+
+.partner-name {
+  display: grid;
+  line-height: 1.18;
+}
+
+.partner-name strong {
+  color: var(--text);
+  font-family: "Outfit", sans-serif;
+  font-size: 0.92rem;
+}
+
+.partner-name span {
+  color: var(--muted);
+  font-size: 0.74rem;
+}
+
+/* ============================================================
+   Floating WhatsApp + Email contact buttons (all pages)
+   ============================================================ */
+.floating-contact {
+  position: fixed;
+  right: clamp(0.9rem, 2vw, 1.4rem);
+  bottom: clamp(0.9rem, 2vw, 1.4rem);
+  z-index: 80;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.fab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  height: 54px;
+  width: 54px;
+  padding: 0;
+  border-radius: 999px;
+  overflow: hidden;
+  color: #fff;
+  box-shadow: 0 12px 26px rgba(20, 18, 38, 0.28);
+  transition: width var(--transition), transform var(--transition), box-shadow var(--transition);
+  white-space: nowrap;
+}
+
+.fab svg {
+  flex: 0 0 54px;
+  width: 54px;
+  height: 54px;
+  padding: 14px;
+}
+
+.fab-label {
+  font-family: "Outfit", sans-serif;
+  font-weight: 800;
+  font-size: 0.9rem;
+  padding-right: 1.1rem;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.fab:hover,
+.fab:focus-visible {
+  width: 178px;
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.fab:hover .fab-label,
+.fab:focus-visible .fab-label {
+  opacity: 1;
+}
+
+.fab-whatsapp {
+  background: linear-gradient(135deg, #29c14e, #1faa43);
+  animation: fabPulse 2.8s ease-in-out infinite;
+}
+
+.fab-email {
+  background: linear-gradient(135deg, var(--accent-light), var(--accent));
+}
+
+@keyframes fabPulse {
+  0%, 100% { box-shadow: 0 12px 26px rgba(20, 18, 38, 0.28), 0 0 0 0 rgba(41, 193, 78, 0.45); }
+  50%      { box-shadow: 0 12px 26px rgba(20, 18, 38, 0.28), 0 0 0 12px rgba(41, 193, 78, 0); }
+}
+
+@media (max-width: 640px) {
+  .fab,
+  .fab svg { height: 50px; }
+  .fab svg { flex-basis: 50px; width: 50px; height: 50px; padding: 13px; }
+  .fab { width: 50px; }
+}
+
+/* ============================================================
+   Services — image instead of bullet lists
+   ============================================================ */
+.service-detail {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0;
+}
+
+.service-detail .service-img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--line);
+}
+
+.service-detail .service-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.25rem 1.3rem 1.4rem;
+}
+
+.service-detail .card-icon {
+  margin: 0;
+}
+
+/* ============================================================
+   Institutions — photo cards linking out
+   ============================================================ */
+.institution-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.1rem;
+}
+
+.institution-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.institution-card:hover {
+  transform: translateY(-6px);
+  border-color: #d6c3e6;
+  box-shadow: var(--shadow);
+}
+
+.institution-photo {
+  position: relative;
+  height: 168px;
+  overflow: hidden;
+}
+
+.institution-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 600ms ease;
+}
+
+.institution-card:hover .institution-photo img {
+  transform: scale(1.07);
+}
+
+.institution-photo .tag {
+  position: absolute;
+  left: 0.75rem;
+  bottom: 0.75rem;
+  padding: 0.28rem 0.66rem;
+  border-radius: 999px;
+  background: rgba(53, 16, 97, 0.86);
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.institution-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 1rem 1.1rem 1.2rem;
+}
+
+.institution-body h3 {
+  color: var(--primary);
+  font-size: 1.02rem;
+}
+
+.institution-body .program {
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.institution-body .visit {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 0.86rem;
+}
+
+/* ============================================================
+   More prominent reveal animations (#15)
+   ============================================================ */
+[data-animate] {
+  transform: translateY(30px) scale(0.985);
+  transition: opacity 620ms cubic-bezier(0.22, 1, 0.36, 1), transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-animate="fade-left"] {
+  transform: translateX(38px);
+}
+
+[data-animate="fade-right"] {
+  transform: translateX(-38px);
+}
+
+[data-animate="zoom"] {
+  transform: scale(0.9);
+}
+
+[data-animate].in-view {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 980px) {
+  .institution-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .institution-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .partners-bar {
+    justify-content: center;
+    text-align: center;
   }
 }

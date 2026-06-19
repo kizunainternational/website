@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <g transform="translate(50 50)">
+    <g fill="#f7a8c4">
+      <g id="p">
+        <path d="M0 -6 C 9 -14 22 -10 22 2 C 22 12 12 20 0 26 C -12 20 -22 12 -22 2 C -22 -10 -9 -14 0 -6 Z" transform="translate(0 -20)"/>
+      </g>
+      <use href="#p" transform="rotate(72)"/>
+      <use href="#p" transform="rotate(144)"/>
+      <use href="#p" transform="rotate(216)"/>
+      <use href="#p" transform="rotate(288)"/>
+    </g>
+    <circle r="7" fill="#fff4f8"/>
+    <g stroke="#e8739c" stroke-width="1.6" stroke-linecap="round">
+      <line x1="0" y1="0" x2="0" y2="-12"/>
+      <line x1="0" y1="0" x2="11" y2="-4" transform="rotate(72)"/>
+      <line x1="0" y1="0" x2="11" y2="-4" transform="rotate(144)"/>
+      <line x1="0" y1="0" x2="11" y2="-4" transform="rotate(216)"/>
+      <line x1="0" y1="0" x2="11" y2="-4" transform="rotate(288)"/>
+    </g>
+    <g fill="#f6c343">
+      <circle cx="0" cy="-12" r="2"/>
+      <circle cx="11" cy="-7" r="2" transform="rotate(72)"/>
+      <circle cx="11" cy="-7" r="2" transform="rotate(144)"/>
+      <circle cx="11" cy="-7" r="2" transform="rotate(216)"/>
+      <circle cx="11" cy="-7" r="2" transform="rotate(288)"/>
+    </g>
+  </g>
+</svg>

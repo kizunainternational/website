@@ -142,12 +142,17 @@ function setupRevealAnimations() {
     (entries, obs) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          const siblings = Array.from(entry.target.parentElement?.children || []).filter((el) =>
+            el.hasAttribute('data-animate')
+          );
+          const order = Math.max(0, siblings.indexOf(entry.target));
+          entry.target.style.transitionDelay = `${Math.min(order, 8) * 90}ms`;
           entry.target.classList.add('in-view');
           obs.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.15, rootMargin: '0px 0px -30px 0px' }
+    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
   );
 
   animatedItems.forEach((item) => observer.observe(item));
