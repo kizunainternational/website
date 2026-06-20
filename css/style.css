@@ -699,7 +699,7 @@ p {
 
 .trust-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -710,6 +710,58 @@ p {
   border-radius: var(--radius);
   background: linear-gradient(180deg, #fff, #fbf7ff);
   box-shadow: var(--shadow-sm);
+}
+
+.trust-social-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trust-social-links {
+  display: flex;
+  align-items: center;
+  gap: 0.48rem;
+  flex: 0 0 auto;
+}
+
+.social-icon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: 0 8px 16px rgba(31, 24, 48, 0.16);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.social-icon:hover,
+.social-icon:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 22px rgba(31, 24, 48, 0.22);
+  outline: none;
+}
+
+.social-icon span {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.social-icon svg {
+  width: 21px;
+  height: 21px;
+  fill: currentColor;
+}
+
+.facebook-icon {
+  background: #1877f2;
+}
+
+.tiktok-icon {
+  background: #111;
 }
 
 .trust-grid h3 {
@@ -985,16 +1037,6 @@ p {
   box-shadow: var(--shadow-sm);
 }
 
-.quote-mark {
-  display: block;
-  height: 24px;
-  color: var(--primary);
-  font-family: Georgia, serif;
-  font-size: 3.3rem;
-  font-weight: 800;
-  line-height: 0.72;
-}
-
 .testimonial-card p {
   min-height: 72px;
   margin: 0.35rem 0 1rem;
@@ -1010,6 +1052,7 @@ p {
 }
 
 .avatar {
+  overflow: hidden;
   display: grid;
   place-items: center;
   width: 42px;
@@ -1018,6 +1061,12 @@ p {
   background: linear-gradient(135deg, var(--accent-light), var(--accent));
   color: #fff;
   font-weight: 800;
+}
+
+.student-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .testimonial-card h3 {
@@ -1225,7 +1274,8 @@ p {
   font: inherit;
 }
 
-.botcheck {
+.botcheck,
+.honeypot {
   display: none;
 }
 
@@ -1304,6 +1354,16 @@ p {
   color: #fff;
   font-family: "Outfit", sans-serif;
   font-weight: 800;
+}
+
+.social-row svg {
+  width: 19px;
+  height: 19px;
+  fill: currentColor;
+}
+
+.social-row .tiktok-footer {
+  background: #111;
 }
 
 .copyright {
@@ -1948,47 +2008,16 @@ p {
 }
 
 /* ============================================================
-   Heritage hero photo + Japanese cultural symbol
+   Heritage hero photo
    ============================================================ */
 .hero,
 .page-hero {
   isolation: isolate;
 }
 
-.hero-symbol {
-  position: absolute;
-  z-index: 2;
-  top: 18%;
-  right: clamp(1rem, 8vw, 7rem);
-  width: clamp(64px, 9vw, 116px);
-  aspect-ratio: 1;
-  background: url("../assets/heritage/sakura.svg") center / contain no-repeat;
-  filter: drop-shadow(0 8px 18px rgba(79, 30, 134, 0.18));
-  opacity: 0.92;
-  pointer-events: none;
-  animation: floatSpin 9s ease-in-out infinite;
-}
-
-.hero-symbol.alt {
-  top: auto;
-  bottom: 16%;
-  right: auto;
-  left: clamp(1rem, 6vw, 5rem);
-  width: clamp(46px, 6vw, 78px);
-  opacity: 0.7;
-  animation-duration: 12s;
-  animation-direction: reverse;
-}
-
 @keyframes heroPhotoIn {
   from { opacity: 0; }
   to   { opacity: 1; }
-}
-
-@keyframes floatSpin {
-  0%   { transform: translateY(0) rotate(0deg); }
-  50%  { transform: translateY(-16px) rotate(20deg); }
-  100% { transform: translateY(0) rotate(0deg); }
 }
 
 /* ============================================================
