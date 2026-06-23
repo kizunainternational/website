@@ -211,16 +211,16 @@ function setupDailyTestimonials() {
     .map(
       (testimonial) => `
         <article class="testimonial-card active">
-          <p>${escapeHtml(testimonial.quote)}</p>
           <div class="student">
             <div class="avatar student-photo">
               <img src="${escapeHtml(testimonial.image)}" alt="${escapeHtml(testimonial.name)}" loading="lazy" />
             </div>
             <div>
               <h3>${escapeHtml(testimonial.name)}</h3>
-              <span>Kizuna Student</span>
             </div>
+            <div class="review-stars" aria-label="Rated 5 out of 5 stars">★★★★★</div>
           </div>
+          <p>${escapeHtml(testimonial.quote)}</p>
         </article>
       `
     )
@@ -418,6 +418,55 @@ window.addEventListener('scroll', () => {
 
 window.addEventListener('resize', closeMenuOnDesktop);
 
+function setupLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  if (!lightbox || !lightboxImg) {
+    return;
+  }
+
+  const openTargets = document.querySelectorAll(
+    '.coe-card:not([aria-hidden="true"]), .photo-grid figure'
+  );
+
+  openTargets.forEach((card) => {
+    card.addEventListener('click', () => {
+      const img = card.querySelector('img');
+      if (!img) {
+        return;
+      }
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+    lightboxImg.src = '';
+  }
+
+  if (lightboxClose) {
+    lightboxClose.addEventListener('click', closeLightbox);
+  }
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+      closeLightbox();
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   setHeaderState();
   setActiveNavLink();
@@ -425,6 +474,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupRevealAnimations();
   setupContactForm();
   setupDynamicDates();
+  setupLightbox();
 
   if (menuToggle) {
     menuToggle.addEventListener('click', () => toggleMenu());
