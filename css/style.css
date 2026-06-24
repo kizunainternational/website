@@ -900,6 +900,28 @@ section[id] {
   line-height: 1.35;
 }
 
+.facebook-band {
+  background: linear-gradient(180deg, #fff 0%, var(--surface-soft) 100%);
+}
+
+.facebook-embed {
+  display: flex;
+  justify-content: center;
+}
+
+.facebook-embed iframe {
+  width: 100%;
+  max-width: 450px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  background: #fff;
+}
+
+.facebook-fallback {
+  margin-top: 1.4rem;
+  text-align: center;
+}
+
 .about {
   position: relative;
   background: #fff;
