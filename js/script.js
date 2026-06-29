@@ -467,6 +467,88 @@ function setupLightbox() {
   });
 }
 
+function setupHeroSlideshow() {
+  const slideshow = document.querySelector('.hero-slideshow');
+  if (!slideshow) return;
+
+  const slides = Array.from(slideshow.querySelectorAll('.hero-slide'));
+  const dotsWrap = slideshow.querySelector('.hero-dots');
+  const prevArrow = slideshow.querySelector('.hero-arrow--prev');
+  const nextArrow = slideshow.querySelector('.hero-arrow--next');
+  if (slides.length < 2) return;
+
+  let current = 0;
+  let timer = null;
+  const INTERVAL = 3000;
+
+  const dots = slides.map((_, i) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.setAttribute('role', 'tab');
+    dot.setAttribute('aria-label', `Slide ${i + 1}`);
+    dot.addEventListener('click', () => {
+      goTo(i);
+      restart();
+    });
+    if (dotsWrap) dotsWrap.appendChild(dot);
+    return dot;
+  });
+
+  function goTo(index) {
+    current = (index + slides.length) % slides.length;
+    slides.forEach((slide, i) => slide.classList.toggle('is-active', i === current));
+    dots.forEach((dot, i) => {
+      const active = i === current;
+      dot.classList.toggle('is-active', active);
+      dot.setAttribute('aria-selected', active ? 'true' : 'false');
+    });
+  }
+
+  function next() {
+    goTo(current + 1);
+  }
+
+  function prev() {
+    goTo(current - 1);
+  }
+
+  function start() {
+    stop();
+    timer = window.setInterval(next, INTERVAL);
+  }
+
+  function stop() {
+    if (timer) {
+      window.clearInterval(timer);
+      timer = null;
+    }
+  }
+
+  function restart() {
+    stop();
+    start();
+  }
+
+  if (prevArrow) {
+    prevArrow.addEventListener('click', () => {
+      prev();
+      restart();
+    });
+  }
+  if (nextArrow) {
+    nextArrow.addEventListener('click', () => {
+      next();
+      restart();
+    });
+  }
+
+  slideshow.addEventListener('mouseenter', stop);
+  slideshow.addEventListener('mouseleave', start);
+
+  goTo(0);
+  start();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   setHeaderState();
   setActiveNavLink();
@@ -475,6 +557,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupContactForm();
   setupDynamicDates();
   setupLightbox();
+  setupHeroSlideshow();
 
   if (menuToggle) {
     menuToggle.addEventListener('click', () => toggleMenu());
