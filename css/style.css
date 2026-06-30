@@ -2350,44 +2350,53 @@ section[id] {
 
 /* Logo letterhead at the top of the white panel
    (banner2.png has blank space above the mark and a wave below it,
-   so the strip is cropped to frame just the logo + wordmark) */
+   so the strip is cropped to frame just the logo + wordmark).
+   Scaled to ~75% of its original size, kept proportional so the
+   cropped logo stays fully visible, and centered. */
 .hero-panel-logo {
   display: block;
-  width: 100%;
-  height: 96px;
+  width: 75%;
+  max-width: 320px;
+  height: 72px;
   object-fit: cover;
   object-position: center 44%;
-  margin: 0 0 0.85rem;
-  padding-bottom: 0.55rem;
+  margin: 0 auto 0.8rem;
+  padding-bottom: 0.4rem;
   border-bottom: 2px solid rgba(79, 30, 134, 0.16);
 }
 
 .hero-jp-lead {
   margin: 0;
-  font-size: clamp(1.05rem, 1.7vw, 1.4rem);
+  font-size: clamp(1.25rem, 2.1vw, 1.7rem);
   font-weight: 800;
-  line-height: 1.35;
+  line-height: 1.32;
   color: var(--primary);
+}
+
+/* First slide's intro line is a short greeting — size it like the title
+   (the other slides keep the smaller lead since theirs are long sentences) */
+.hero-slide[data-slide="0"] .hero-jp-lead {
+  font-size: clamp(1.5rem, 2.7vw, 2.3rem);
 }
 
 .hero-jp-title {
   margin: 0.5rem 0 0.55rem;
-  font-size: clamp(1.25rem, 2.2vw, 1.9rem);
+  font-size: clamp(1.5rem, 2.7vw, 2.3rem);
   font-weight: 800;
-  line-height: 1.3;
+  line-height: 1.28;
   color: var(--primary);
 }
 
 .hero-jp-subtitle {
   margin: 0.7rem 0 0.55rem;
-  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-size: clamp(1.2rem, 1.85vw, 1.55rem);
   font-weight: 800;
   color: var(--accent);
 }
 
 .hero-jp-cta {
   margin: 0;
-  font-size: clamp(0.92rem, 1.3vw, 1.12rem);
+  font-size: clamp(1.1rem, 1.6vw, 1.4rem);
   font-weight: 800;
   color: var(--accent);
 }
@@ -2402,9 +2411,9 @@ section[id] {
 }
 
 .hero-jp-chips li {
-  padding: 0.18rem 0.6rem;
+  padding: 0.22rem 0.7rem;
   border-radius: 999px;
-  font-size: 0.82rem;
+  font-size: 0.96rem;
   font-weight: 700;
   color: var(--primary);
   background: rgba(79, 30, 134, 0.08);
@@ -2421,8 +2430,8 @@ section[id] {
 
 .hero-jp-list li {
   position: relative;
-  padding-left: 1.2rem;
-  font-size: 0.92rem;
+  padding-left: 1.3rem;
+  font-size: 1.08rem;
   font-weight: 600;
   line-height: 1.4;
 }
@@ -2438,7 +2447,7 @@ section[id] {
 
 .hero-jp-foot {
   margin: 0.55rem 0 0;
-  font-size: 0.84rem;
+  font-size: 0.98rem;
   color: var(--muted);
 }
 
@@ -2547,14 +2556,104 @@ section[id] {
   transform: scale(1.25);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 930px) {
   .hero-panel {
-    max-width: 520px;
+    max-width: 560px;
     margin: 0 auto;
   }
+  /* Centre the panel vertically instead of pinning it to the bottom, so the
+     taller white panel has room above and below. */
   .hero-slide .container {
-    align-items: flex-end;
-    padding-bottom: 2.4rem;
+    align-items: center;
+    padding-bottom: 0;
+  }
+
+  /* The white hero panel (logo + big heading + chips) is much taller than the
+     old 4:1 banner — give the slideshow hero enough height so no slide clips. */
+  .hero.hero-slideshow {
+    min-height: clamp(380px, 56vw, 480px);
+  }
+
+  /* Trust bar: the social card gets its own full-width row under the 2×2 cards */
+  .trust-social-card {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero.hero-slideshow {
+    min-height: clamp(430px, 116vw, 540px);
+  }
+
+  .hero-panel {
+    max-width: 100%;
+    padding: 0.95rem 1.05rem 1.1rem;
+  }
+
+  /* Smaller letterhead so the logo doesn't dominate the panel on phones */
+  .hero-panel-logo {
+    width: 62%;
+    max-width: 220px;
+    height: 52px;
+  }
+
+  .hero-jp-lead {
+    font-size: clamp(1.05rem, 4.4vw, 1.35rem);
+  }
+
+  /* Keep the first slide's intro line matched to the title on phones too */
+  .hero-slide[data-slide="0"] .hero-jp-lead {
+    font-size: clamp(1.3rem, 5.4vw, 1.8rem);
+  }
+
+  .hero-jp-title {
+    font-size: clamp(1.3rem, 5.4vw, 1.8rem);
+  }
+
+  .hero-jp-subtitle {
+    font-size: clamp(1.08rem, 4.2vw, 1.4rem);
+  }
+
+  .hero-jp-cta {
+    font-size: clamp(1rem, 3.8vw, 1.28rem);
+  }
+
+  .hero-jp-chips {
+    gap: 0.32rem;
+  }
+
+  .hero-jp-chips li {
+    font-size: 0.82rem;
+    padding: 0.16rem 0.55rem;
+  }
+
+  .hero-jp-list li {
+    font-size: 0.98rem;
+  }
+
+  .hero-jp-foot {
+    font-size: 0.88rem;
+  }
+
+  /* Trust bar: compact 2×2 cards with the icon stacked over a centred label */
+  .trust-grid {
+    gap: 0.7rem;
+  }
+
+  .trust-card-link {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+    min-height: 0;
+    padding: 0.95rem 0.6rem;
+  }
+
+  .trust-card-link .stat-icon {
+    transform: scale(1.1);
+  }
+
+  .trust-card-link h3 {
+    font-size: 0.98rem;
   }
 }
 
