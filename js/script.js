@@ -542,9 +542,6 @@ function setupHeroSlideshow() {
     });
   }
 
-  slideshow.addEventListener('mouseenter', stop);
-  slideshow.addEventListener('mouseleave', start);
-
   goTo(0);
   start();
 }
