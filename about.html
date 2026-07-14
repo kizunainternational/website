@@ -14,33 +14,44 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css?v=4" />
     <link rel="icon" type="image/png" href="assets/logo/favicon.png" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
 
+        <div class="top-bar">
+      <div class="container top-bar-inner">
+        <div class="top-bar-left">
+          <a class="top-social top-facebook" href="https://www.facebook.com/kizunakathmandu" target="_blank" rel="noopener noreferrer" aria-label="Kizuna International Education on Facebook"><span aria-hidden="true">f</span></a>
+          <a class="top-social top-tiktok" href="https://www.tiktok.com/@kizunaintl?_r=1&amp;_t=ZS-97N99hQVUxt" target="_blank" rel="noopener noreferrer" aria-label="Kizuna International Education on TikTok"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15.7 3.2c.5 2.4 1.9 3.8 4.1 4.2v3.5a7.5 7.5 0 0 1-4-1.1v5.8c0 3.1-2.4 5.3-5.5 5.3-2.9 0-5.1-2-5.1-4.8 0-3.1 2.7-5.3 6.2-4.8v3.6c-1.3-.5-2.6.2-2.6 1.4 0 .9.7 1.5 1.6 1.5 1 0 1.8-.7 1.8-2V3.2h3.5Z" /></svg></a>
+          <a class="top-phone" href="tel:014578939" aria-label="Call Kizuna at 01-4578939"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>01-4578939</span></a>
+        </div>
+        <nav class="top-bar-right" aria-label="Utility navigation">
+          <a href="faq.html" class="top-link">FAQs</a>
+          <a href="photos.html" class="top-link">Photos</a>
+          <a href="testimonials.html" class="top-link">Testimonials</a>
+          <a href="https://wa.me/9779851167689" class="btn btn-primary top-cta">Book a Free Consultation</a>
+        </nav>
+      </div>
+    </div>
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="brand" href="index.html" aria-label="Kizuna International Education home">
-          <img src="assets/logo/kizuna-logo.jpeg" alt="Kizuna International Education logo" />
-          <span>Kizuna Int'l Education <small>PVT. LTD.</small></span>
-        </a>
-        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open navigation menu">
-          <span></span><span></span><span></span>
-        </button>
+        <a class="brand" href="index.html" aria-label="Kizuna International Education home"><img src="assets/logo/kizuna-logo.jpeg" alt="Kizuna International Education logo" /><span>Kizuna Int'l Education <small>PVT. LTD.</small></span></a>
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
         <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">
           <ul>
             <li><a href="index.html" class="nav-link">Home</a></li>
             <li><a href="services.html" class="nav-link">Our Services</a></li>
             <li><a href="why-japan.html" class="nav-link">Why Japan</a></li>
             <li><a href="partners.html" class="nav-link">Institutions</a></li>
-            <li><a href="faq.html" class="nav-link">FAQs</a></li>
-            <li><a href="photos.html" class="nav-link">Photos</a></li>
             <li><a href="about.html" class="nav-link active">About Us</a></li>
             <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            <li class="nav-mobile-only"><a href="faq.html" class="nav-link">FAQs</a></li>
+            <li class="nav-mobile-only"><a href="photos.html" class="nav-link">Photos</a></li>
+            <li class="nav-mobile-only"><a href="testimonials.html" class="nav-link">Testimonials</a></li>
           </ul>
-          <a href="https://wa.me/9779851167689" class="btn btn-primary nav-cta">Book a Free Consultation</a>
+          <a href="https://wa.me/9779851167689" class="btn btn-primary nav-cta nav-mobile-only">Book a Free Consultation</a>
         </nav>
       </div>
     </header>
@@ -58,12 +69,18 @@
           <div class="about-image" data-animate="fade-right">
             <img src="assets/logo/banner1.png" alt="Kizuna International Education team and student support" />
           </div>
-          <div class="about-content" data-animate="fade-left">
+          <div class="about-content about-content--rich" data-animate="fade-left">
             <p class="eyebrow">Our Story</p>
             <h2>A Focused Pathway to Japan</h2>
-            <p>Established in 2018 (2074 B.S.) and registered with Nepal's Company Registrar and Ministry of Social Development.</p>
-            <p>Kizuna means "bond" in Japanese · the bond we build with students, parents, and institutions across Japan.</p>
-            <p>Our team brings Japan experience and 20+ years of Japanese language instruction.</p>
+            <p>Kizuna International Education Pvt. Ltd. is a trusted Japan-focused education consultancy based in Kathmandu, Nepal. Established in 2018 A.D. (2074 B.S.), we are officially registered with the Office of the Company Registrar and licensed by the Ministry of Social Development, Bagmati Province. We are committed to providing transparent guidance and personalized support to students pursuing higher education and language studies in Japan.</p>
+            <p>The name <strong>Kizuna (絆)</strong> means <strong>&ldquo;bond&rdquo;</strong> in Japanese &mdash; a principle that reflects our commitment to every student. We believe our responsibility extends beyond admissions and visa approvals. From your first consultation to your successful transition into life in Japan, we are with you at every stage of your journey.</p>
+            <p>Backed by firsthand experience of Japan and years of combined Japanese language teaching expertise, our team provides practical, reliable guidance tailored to each student&rsquo;s goals. Rather than offering a one-size-fits-all approach, we help students make informed decisions that lead to long-term success.</p>
+            <p>Our services include educational counselling, Japanese language training, JLPT and JFT preparation, school and university placement, documentation assistance, visa application support, pre-departure orientation, and post-arrival guidance.</p>
+            <p>At Kizuna, we don&rsquo;t just help students study in Japan. We help them build a successful future with confidence.</p>
+            <div class="about-statcard">
+              <strong>20+ Years</strong>
+              <span>Combined team experience in Japanese language instruction</span>
+            </div>
           </div>
         </div>
       </section>
@@ -71,14 +88,28 @@
       <section class="content-band soft section-pad" id="mission-values">
         <div class="container">
           <div class="section-head center" data-animate="fade-up">
-            <p class="eyebrow">Mission &amp; Values</p>
+            <p class="eyebrow">Mission, Vision &amp; Values</p>
             <h2>What Guides Every Student Decision</h2>
           </div>
           <div class="content-grid">
             <article class="detail-card" data-animate="fade-up">
               <h3>Our Mission</h3>
-              <p>Honest counselling, strong language training, and reliable institutional links to Japan.</p>
+              <p>To take students from their first question about Japan to their first day in a Japanese classroom &mdash; with honest counselling, real language skills, and paperwork that actually gets approved. No shortcuts, no false promises, just a clear path from Kathmandu to Japan.</p>
             </article>
+            <article class="detail-card" data-animate="fade-up">
+              <h3>Our Vision</h3>
+              <p>To be the consultancy Nepali students trust before anyone else asks. We want to be known not for the number of students we send, but for how few of them run into problems once they get there.</p>
+            </article>
+            <article class="detail-card" data-animate="fade-up">
+              <h3>Our Values</h3>
+              <p>We only transfer visa fees after COE approval, directly to the official receiver, because trust has to be earned before it&rsquo;s charged for. We answer the phone after a student lands in Japan, not just before they enroll. That&rsquo;s what &ldquo;Kizuna&rdquo; means to us: a relationship that doesn&rsquo;t end at admission.</p>
+            </article>
+          </div>
+
+          <div class="section-head center about-pillars-head" data-animate="fade-up">
+            <h3 class="pillars-title">What We Stand For</h3>
+          </div>
+          <div class="content-grid">
             <article class="detail-card" data-animate="fade-up">
               <h3>Honesty First</h3>
               <p>We tell students what they need to hear, not what they want to hear.</p>
@@ -96,9 +127,57 @@
               <p>We stay connected with students even after they arrive in Japan.</p>
             </article>
             <article class="detail-card" data-animate="fade-up">
+              <h3>Transparent Fees</h3>
+              <p>Visa fees are transferred only after COE approval, straight to the official receiver.</p>
+            </article>
+            <article class="detail-card" data-animate="fade-up">
               <h3>Recognized Work</h3>
               <p>Trusted by Japanese partner institutions and Nepal's Ministry of Social Development.</p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-band section-pad" id="directors-message">
+        <div class="container">
+          <div class="section-head center" data-animate="fade-up">
+            <p class="eyebrow">From the Director</p>
+            <h2>Director&rsquo;s Message</h2>
+          </div>
+
+          <div class="director-card" data-animate="fade-up">
+            <div class="director-toolbar">
+              <div class="lang-toggle" role="group" aria-label="Choose message language">
+                <button type="button" class="lang-btn active" data-lang-btn="en" aria-pressed="true">English</button>
+                <button type="button" class="lang-btn" data-lang-btn="ja" aria-pressed="false">日本語</button>
+              </div>
+            </div>
+
+            <div class="director-body">
+              <div class="director-message" data-lang-panel="en">
+                <p>Dear Students and Parents/Guardians,</p>
+                <p>Greetings from <strong>Kizuna International Education Pvt. Ltd.</strong></p>
+                <p>Choosing the right educational consultancy is one of the most important decisions for students planning to study abroad. While there are many consultancies offering overseas education services in Nepal, only a few possess the in-house expertise and comprehensive knowledge of the rules and regulations related to international education, university and college admissions, financial assistance, and visa procedures. Moreover, hardly a few of them maintain high ethical standards and transparency in their operations.</p>
+                <p>At <strong>Kizuna International Education</strong>, we are committed to providing honest, reliable, and personalized guidance throughout every stage of your study abroad journey. Our experienced team offers comprehensive support, including university and college selection, admissions counselling, documentation, visa application assistance, and pre- and post-departure guidance.</p>
+                <p>Our mission is to help students achieve excellence in their academic and career aspirations by connecting them with reputable and recognized institutions. Over the years, we have successfully guided and supported many students in their international education goals. Their trust, success, and positive feedback continue to inspire us to provide even higher standards of service.</p>
+                <p>Whether you have already decided to study abroad or are still exploring your options, we warmly invite you to visit our office. We would be delighted to discuss your goals, answer your questions, and help you choose the pathway that best suits your future.</p>
+                <p>We look forward to being a part of your educational journey and helping you build a successful future.</p>
+                <p>Thank you.</p>
+                <p class="director-signoff">Warm regards,<br /><strong>Santosh Kumar Pakuwal</strong><br />Director<br />Kizuna International Education Pvt. Ltd.</p>
+              </div>
+
+              <div class="director-message" data-lang-panel="ja" lang="ja" hidden>
+                <p>学生の皆様ならびに保護者の皆様へ</p>
+                <p><strong>Kizuna International Education Pvt. Ltd.</strong> より心よりご挨拶申し上げます。</p>
+                <p>留学を計画されている学生にとって、適切な留学コンサルタントを選ぶことは最も重要な決断の一つです。ネパールには海外留学サービスを提供するコンサルタント会社が数多くありますが、国際教育、大学・カレッジ入学、奨学金、ビザ手続きに関する専門知識と包括的な知識を備えている会社はごくわずかです。さらに、高い倫理基準と透明性を維持している会社はさらに少ないのが現状です。</p>
+                <p><strong>Kizuna International Education Pvt. Ltd.</strong> は、留学のあらゆる段階において、誠実で信頼できる、そして一人ひとりに合わせたサポートを提供することをお約束します。経験豊富なチームが、大学・カレッジ選び、入学相談、書類作成、ビザ申請支援、渡航前後のサポートなど、包括的なサポートを提供いたします。</p>
+                <p>私たちの使命は、学生の皆様を評判の高い教育機関と繋げることで、学業とキャリアにおける目標達成を支援することです。長年にわたり、多くの学生の皆様の国際留学の目標達成を成功へと導いてきました。お客様からの信頼、成功、そして肯定的なフィードバックは、私たちがより高い水準のサービスを提供し続けるための大きな励みとなっています。</p>
+                <p>留学をすでに決めている方も、まだ選択肢を検討中の方も、ぜひ当オフィスにお越しください。皆様の目標についてお話を伺い、ご質問にお答えし、将来に最適な道筋を見つけるお手伝いをさせていただきます。</p>
+                <p>皆様の学びの旅路に寄り添い、輝かしい未来を築くお手伝いができることを心待ちにしております。</p>
+                <p>今後ともどうぞよろしくお願い申し上げます。</p>
+                <p class="director-signoff">敬具<br /><strong>Santosh Kumar Pakuwal</strong><br />代表取締役<br />Kizuna International Education Pvt. Ltd.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

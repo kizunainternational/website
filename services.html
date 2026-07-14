@@ -8,11 +8,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css?v=4" />
     <link rel="icon" type="image/png" href="assets/logo/favicon.png" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
+        <div class="top-bar">
+      <div class="container top-bar-inner">
+        <div class="top-bar-left">
+          <a class="top-social top-facebook" href="https://www.facebook.com/kizunakathmandu" target="_blank" rel="noopener noreferrer" aria-label="Kizuna International Education on Facebook"><span aria-hidden="true">f</span></a>
+          <a class="top-social top-tiktok" href="https://www.tiktok.com/@kizunaintl?_r=1&amp;_t=ZS-97N99hQVUxt" target="_blank" rel="noopener noreferrer" aria-label="Kizuna International Education on TikTok"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15.7 3.2c.5 2.4 1.9 3.8 4.1 4.2v3.5a7.5 7.5 0 0 1-4-1.1v5.8c0 3.1-2.4 5.3-5.5 5.3-2.9 0-5.1-2-5.1-4.8 0-3.1 2.7-5.3 6.2-4.8v3.6c-1.3-.5-2.6.2-2.6 1.4 0 .9.7 1.5 1.6 1.5 1 0 1.8-.7 1.8-2V3.2h3.5Z" /></svg></a>
+          <a class="top-phone" href="tel:014578939" aria-label="Call Kizuna at 01-4578939"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>01-4578939</span></a>
+        </div>
+        <nav class="top-bar-right" aria-label="Utility navigation">
+          <a href="faq.html" class="top-link">FAQs</a>
+          <a href="photos.html" class="top-link">Photos</a>
+          <a href="testimonials.html" class="top-link">Testimonials</a>
+          <a href="https://wa.me/9779851167689" class="btn btn-primary top-cta">Book a Free Consultation</a>
+        </nav>
+      </div>
+    </div>
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="brand" href="index.html" aria-label="Kizuna International Education home"><img src="assets/logo/kizuna-logo.jpeg" alt="Kizuna International Education logo" /><span>Kizuna Int'l Education <small>PVT. LTD.</small></span></a>
@@ -23,12 +38,13 @@
             <li><a href="services.html" class="nav-link active">Our Services</a></li>
             <li><a href="why-japan.html" class="nav-link">Why Japan</a></li>
             <li><a href="partners.html" class="nav-link">Institutions</a></li>
-            <li><a href="faq.html" class="nav-link">FAQs</a></li>
-            <li><a href="photos.html" class="nav-link">Photos</a></li>
             <li><a href="about.html" class="nav-link">About Us</a></li>
             <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            <li class="nav-mobile-only"><a href="faq.html" class="nav-link">FAQs</a></li>
+            <li class="nav-mobile-only"><a href="photos.html" class="nav-link">Photos</a></li>
+            <li class="nav-mobile-only"><a href="testimonials.html" class="nav-link">Testimonials</a></li>
           </ul>
-          <a href="https://wa.me/9779851167689" class="btn btn-primary nav-cta">Book a Free Consultation</a>
+          <a href="https://wa.me/9779851167689" class="btn btn-primary nav-cta nav-mobile-only">Book a Free Consultation</a>
         </nav>
       </div>
     </header>
@@ -42,49 +58,181 @@
       </section>
 
       <section class="content-band section-pad">
-        <div class="container content-grid two">
-          <article class="detail-card service-detail" data-animate="fade-up">
-            <img class="service-img" src="assets/services/counselling.jpg" alt="Counsellor advising a student" loading="lazy" />
-            <div class="service-body">
-              <h3>Free Educational Counselling</h3>
-              <p>Honest guidance on courses, costs, cities, and timelines · free for students and parents.</p>
-            </div>
-          </article>
-          <article class="detail-card service-detail" data-animate="fade-up">
-            <img class="service-img" src="assets/services/language.jpg" alt="Japanese language classroom" loading="lazy" />
-            <div class="service-body">
-              <h3>In-House Japanese Language Classes</h3>
-              <p>N5 to N3 classes in Kathmandu, led by our Japan-trained instructor. NPR 5,000 / 5 months.</p>
-            </div>
-          </article>
-          <article class="detail-card service-detail" data-animate="fade-up">
-            <img class="service-img" src="assets/services/admission.jpg" alt="Admission documents being prepared" loading="lazy" />
-            <div class="service-body">
-              <h3>Institutional Matching &amp; Admission Processing</h3>
-              <p>Matched to 28+ partner schools, with full document preparation, translation, and embassy-ready formatting.</p>
-            </div>
-          </article>
-          <article class="detail-card service-detail" data-animate="fade-up">
-            <img class="service-img" src="assets/services/visa.jpg" alt="Passport and visa documents" loading="lazy" />
-            <div class="service-body">
-              <h3>Visa Guidance &amp; Application Support</h3>
-              <p>Step-by-step visa support after COE approval. Fees are transferred only after COE is received.</p>
-            </div>
-          </article>
-          <article class="detail-card service-detail" data-animate="fade-up">
-            <img class="service-img" src="assets/services/predeparture.jpg" alt="Student preparing to travel to Japan" loading="lazy" />
-            <div class="service-body">
-              <h3>Pre-Departure Support</h3>
-              <p>Culture orientation, accommodation guidance, and part-time work rights · before you fly.</p>
-            </div>
-          </article>
-          <article class="detail-card service-detail" data-animate="fade-up">
-            <img class="service-img" src="assets/services/postarrival.jpg" alt="Students settled in Japan" loading="lazy" />
-            <div class="service-body">
-              <h3>Post-Arrival &amp; Ongoing Support</h3>
-              <p>Enrollment follow-up, airport pickup coordination, and phone support after you reach Japan.</p>
-            </div>
-          </article>
+        <div class="container">
+          <div class="section-head center" data-animate="fade-up">
+            <p class="eyebrow">Our Services</p>
+            <h2>Everything You Need, Under One Roof</h2>
+            <p>Tap any card to see the full details.</p>
+          </div>
+          <div class="content-grid two service-grid-clickable">
+            <article class="detail-card service-detail service-clickable" data-service tabindex="0" role="button" aria-haspopup="dialog" aria-label="Free Educational Counselling — view details" data-animate="fade-up">
+              <img class="service-img" src="assets/services/counselling.jpg" alt="Counsellor advising a student" loading="lazy" />
+              <div class="service-body">
+                <h3>Free Educational Counselling</h3>
+                <p>Honest guidance on courses, costs, cities, and timelines · free for students and parents.</p>
+                <span class="service-more-link">Learn more <span aria-hidden="true">&rarr;</span></span>
+              </div>
+              <template class="service-full">
+                <span class="service-modal-eyebrow">Our Services</span>
+                <h3>Free Educational Counselling</h3>
+                <p>Choosing a country, a city, and a school is a big decision. Our counselling is completely free and honest &mdash; for students and parents alike.</p>
+                <ul>
+                  <li>A frank assessment of your academic background, budget, and goals</li>
+                  <li>Realistic guidance on courses, costs, cities, and timelines</li>
+                  <li>A clear comparison of Japan versus other destinations</li>
+                  <li>A step-by-step plan with no pressure and no hidden fees</li>
+                </ul>
+                <p>We tell you what you need to hear, not what you want to hear.</p>
+              </template>
+            </article>
+
+            <article class="detail-card service-detail service-clickable" data-service tabindex="0" role="button" aria-haspopup="dialog" aria-label="In-House Japanese Language Classes — view details" data-animate="fade-up">
+              <img class="service-img" src="assets/services/language.jpg" alt="Japanese language classroom" loading="lazy" />
+              <div class="service-body">
+                <h3>In-House Japanese Language Classes</h3>
+                <p>N5 to N3 classes in Kathmandu, led by our Japan-trained instructor. NPR 5,000 / 5 months.</p>
+                <span class="service-more-link">Learn more <span aria-hidden="true">&rarr;</span></span>
+              </div>
+              <template class="service-full">
+                <span class="service-modal-eyebrow">Our Services</span>
+                <h3>In-House Japanese Language Classes</h3>
+                <p>We prepare students from N5 to N3 right here in Kathmandu, led by our Japan-trained instructor with 20+ years of teaching experience.</p>
+                <ul>
+                  <li>Structured N5 &rarr; N3 curriculum covering reading, writing, listening, and speaking</li>
+                  <li>Small batches with individual attention</li>
+                  <li>JLPT and JFT exam preparation built into the course</li>
+                  <li>Fee: NPR 5,000 for a 5-month course</li>
+                </ul>
+                <p>Strong language skills mean stronger applications &mdash; and an easier life after you arrive.</p>
+              </template>
+            </article>
+
+            <article class="detail-card service-detail service-clickable" data-service tabindex="0" role="button" aria-haspopup="dialog" aria-label="Institutional Matching and Admission Processing — view details" data-animate="fade-up">
+              <img class="service-img" src="assets/services/admission.jpg" alt="Admission documents being prepared" loading="lazy" />
+              <div class="service-body">
+                <h3>Institutional Matching &amp; Admission Processing</h3>
+                <p>Matched to 28+ partner schools, with full document preparation, translation, and embassy-ready formatting.</p>
+                <span class="service-more-link">Learn more <span aria-hidden="true">&rarr;</span></span>
+              </div>
+              <template class="service-full">
+                <span class="service-modal-eyebrow">Our Services</span>
+                <h3>Institutional Matching &amp; Admission Processing</h3>
+                <p>We match you to the right school from our 28+ partner institutions across Japan, then handle the paperwork from start to finish.</p>
+                <ul>
+                  <li>School selection based on your goals, budget, and preferred location</li>
+                  <li>Full document preparation, translation, and embassy-ready formatting</li>
+                  <li>Direct coordination with Japanese admissions offices</li>
+                  <li>Application tracking until your Certificate of Eligibility (COE) is issued</li>
+                </ul>
+                <p>Reputable schools only &mdash; quality over quantity.</p>
+              </template>
+            </article>
+
+            <article class="detail-card service-detail service-clickable" data-service tabindex="0" role="button" aria-haspopup="dialog" aria-label="Visa Guidance and Application Support — view details" data-animate="fade-up">
+              <img class="service-img" src="assets/services/visa.jpg" alt="Passport and visa documents" loading="lazy" />
+              <div class="service-body">
+                <h3>Visa Guidance &amp; Application Support</h3>
+                <p>Step-by-step visa support after COE approval. Fees are transferred only after COE is received.</p>
+                <span class="service-more-link">Learn more <span aria-hidden="true">&rarr;</span></span>
+              </div>
+              <template class="service-full">
+                <span class="service-modal-eyebrow">Our Services</span>
+                <h3>Visa Guidance &amp; Application Support</h3>
+                <p>Once your COE is approved, we guide you through the student visa application, one step at a time.</p>
+                <ul>
+                  <li>A complete visa documentation checklist and thorough review</li>
+                  <li>Guidance on financial documents and interview preparation</li>
+                  <li>Fees transferred only after the COE is received &mdash; directly to the official receiver</li>
+                  <li>Support with partial refunds if a visa is denied</li>
+                </ul>
+                <p>No upfront risk, and no surprises.</p>
+              </template>
+            </article>
+
+            <article class="detail-card service-detail service-clickable" data-service tabindex="0" role="button" aria-haspopup="dialog" aria-label="Pre-Departure Support — view details" data-animate="fade-up">
+              <img class="service-img" src="assets/services/predeparture.jpg" alt="Student preparing to travel to Japan" loading="lazy" />
+              <div class="service-body">
+                <h3>Pre-Departure Support</h3>
+                <p>Culture orientation, accommodation guidance, and part-time work rights · before you fly.</p>
+                <span class="service-more-link">Learn more <span aria-hidden="true">&rarr;</span></span>
+              </div>
+              <template class="service-full">
+                <span class="service-modal-eyebrow">Our Services</span>
+                <h3>Pre-Departure Support</h3>
+                <p>Before you fly, we make sure you are genuinely ready for life in Japan.</p>
+                <ul>
+                  <li>Cultural orientation and everyday etiquette</li>
+                  <li>Accommodation guidance and a practical packing list</li>
+                  <li>Your rights around legal part-time work (up to 28 hours per week)</li>
+                  <li>Banking, SIM cards, and first-week essentials</li>
+                </ul>
+                <p>You land prepared, not overwhelmed.</p>
+              </template>
+            </article>
+
+            <article class="detail-card service-detail service-clickable" data-service tabindex="0" role="button" aria-haspopup="dialog" aria-label="Post-Arrival and Ongoing Support — view details" data-animate="fade-up">
+              <img class="service-img" src="assets/services/postarrival.jpg" alt="Students settled in Japan" loading="lazy" />
+              <div class="service-body">
+                <h3>Post-Arrival &amp; Ongoing Support</h3>
+                <p>Enrollment follow-up, airport pickup coordination, and phone support after you reach Japan.</p>
+                <span class="service-more-link">Learn more <span aria-hidden="true">&rarr;</span></span>
+              </div>
+              <template class="service-full">
+                <span class="service-modal-eyebrow">Our Services</span>
+                <h3>Post-Arrival &amp; Ongoing Support</h3>
+                <p>Our relationship does not end at the airport gate.</p>
+                <ul>
+                  <li>Enrollment follow-up with your school</li>
+                  <li>Airport pickup coordination</li>
+                  <li>Phone support after you reach Japan</li>
+                  <li>Guidance on renewals, part-time work, and your next academic steps</li>
+                </ul>
+                <p>That is exactly what &ldquo;Kizuna&rdquo; &mdash; bond &mdash; means to us.</p>
+              </template>
+            </article>
+
+            <article class="detail-card service-detail service-clickable" data-service tabindex="0" role="button" aria-haspopup="dialog" aria-label="JLPT Preparation — view details" data-animate="fade-up">
+              <div class="service-badge service-badge--jlpt"><span>JLPT</span></div>
+              <div class="service-body">
+                <h3>JLPT Preparation</h3>
+                <p>Prepare for the Japanese-Language Proficiency Test, from N5 through N3, with practice tests and exam strategy.</p>
+                <span class="service-more-link">Learn more <span aria-hidden="true">&rarr;</span></span>
+              </div>
+              <template class="service-full">
+                <span class="service-modal-eyebrow">Exam Preparation</span>
+                <h3>JLPT Preparation</h3>
+                <p>The <strong>Japanese-Language Proficiency Test (JLPT)</strong> is the world&rsquo;s most widely recognized measure of Japanese ability for non-native speakers.</p>
+                <ul>
+                  <li>Five levels, from <strong>N5</strong> (basic) to <strong>N1</strong> (advanced); most language schools accept N5/N4 for entry, while universities and employers often look for N2/N1</li>
+                  <li>Tests vocabulary, grammar, reading, and listening</li>
+                  <li>Held twice a year, typically in July and December</li>
+                  <li>We prepare students from N5 to N3 in-house, with mock tests and exam strategy</li>
+                </ul>
+                <p>A JLPT certificate strengthens your admission and visa application &mdash; and opens doors to work in Japan.</p>
+              </template>
+            </article>
+
+            <article class="detail-card service-detail service-clickable" data-service tabindex="0" role="button" aria-haspopup="dialog" aria-label="JFT-Basic Preparation — view details" data-animate="fade-up">
+              <div class="service-badge service-badge--jft"><span>JFT</span></div>
+              <div class="service-body">
+                <h3>JFT-Basic Preparation</h3>
+                <p>Prepare for the Japan Foundation Test for Basic Japanese &mdash; the key language step for the Specified Skilled Worker visa.</p>
+                <span class="service-more-link">Learn more <span aria-hidden="true">&rarr;</span></span>
+              </div>
+              <template class="service-full">
+                <span class="service-modal-eyebrow">Exam Preparation</span>
+                <h3>JFT-Basic Preparation</h3>
+                <p>The <strong>JFT-Basic (Japan Foundation Test for Basic Japanese)</strong> measures whether you have the basic Japanese needed for daily life &mdash; and is a key requirement for the <strong>Specified Skilled Worker (SSW)</strong> visa.</p>
+                <ul>
+                  <li>Assesses A2-level ability (CEFR): script &amp; vocabulary, conversation &amp; expression, listening, and reading comprehension</li>
+                  <li>Computer-based test (CBT) offered several times a year in Nepal and across Asia</li>
+                  <li>Widely used by employers hiring under Japan&rsquo;s SSW / Tokutei Ginou program</li>
+                  <li>We guide students preparing for work-focused pathways to Japan</li>
+                </ul>
+                <p>The practical route for those aiming to work in Japan.</p>
+              </template>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -101,6 +249,14 @@
         </div>
       </section>
     </main>
+
+    <div class="service-modal" id="serviceModal" role="dialog" aria-modal="true" aria-label="Service details" hidden>
+      <div class="service-modal-backdrop" data-close></div>
+      <div class="service-modal-panel" role="document">
+        <button type="button" class="service-modal-close" data-close aria-label="Close">&times;</button>
+        <div class="service-modal-content" id="serviceModalContent"></div>
+      </div>
+    </div>
 
     <div class="floating-contact" aria-label="Quick contact">
       <a class="fab fab-whatsapp" href="https://wa.me/9779851167689" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
