@@ -229,6 +229,34 @@ function setupDailyTestimonials() {
   testimonialCards = Array.from(document.querySelectorAll('.testimonial-card'));
 }
 
+// Testimonials page — render every review (the full pool that rotates
+// three-at-a-time on the home page) into a static grid.
+function setupAllTestimonials() {
+  const grid = document.querySelector('[data-all-testimonials]');
+  if (!grid || dailyTestimonials.length === 0) {
+    return;
+  }
+
+  grid.innerHTML = dailyTestimonials
+    .map(
+      (testimonial) => `
+        <article class="testimonial-card active">
+          <div class="student">
+            <div class="avatar student-photo">
+              <img src="${escapeHtml(testimonial.image)}" alt="${escapeHtml(testimonial.name)}" loading="lazy" />
+            </div>
+            <div>
+              <h3>${escapeHtml(testimonial.name)}</h3>
+            </div>
+            <div class="review-stars" aria-label="Rated 5 out of 5 stars">★★★★★</div>
+          </div>
+          <p>${escapeHtml(testimonial.quote)}</p>
+        </article>
+      `
+    )
+    .join('');
+}
+
 function setSlide(index) {
   if (testimonialCards.length === 0) {
     return;
@@ -418,6 +446,37 @@ window.addEventListener('scroll', () => {
 
 window.addEventListener('resize', closeMenuOnDesktop);
 
+// Director's message — English / Japanese toggle (defaults to English).
+function setupLanguageToggle() {
+  const toggle = document.querySelector('.lang-toggle');
+  if (!toggle) {
+    return;
+  }
+
+  const buttons = Array.from(toggle.querySelectorAll('[data-lang-btn]'));
+  const panels = Array.from(document.querySelectorAll('[data-lang-panel]'));
+  if (buttons.length === 0 || panels.length === 0) {
+    return;
+  }
+
+  function selectLanguage(lang) {
+    panels.forEach((panel) => {
+      panel.hidden = panel.getAttribute('data-lang-panel') !== lang;
+    });
+    buttons.forEach((btn) => {
+      const isActive = btn.getAttribute('data-lang-btn') === lang;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-pressed', String(isActive));
+    });
+  }
+
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => selectLanguage(btn.getAttribute('data-lang-btn')));
+  });
+
+  selectLanguage('en');
+}
+
 function setupLightbox() {
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightboxImg');
@@ -463,6 +522,66 @@ function setupLightbox() {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && lightbox.classList.contains('open')) {
       closeLightbox();
+    }
+  });
+}
+
+// Services page — each card opens a modal with its full details.
+function setupServiceModals() {
+  const modal = document.getElementById('serviceModal');
+  const content = document.getElementById('serviceModalContent');
+  const cards = Array.from(document.querySelectorAll('[data-service]'));
+  if (!modal || !content || cards.length === 0) {
+    return;
+  }
+
+  let lastFocused = null;
+
+  function openModal(card) {
+    const template = card.querySelector('.service-full');
+    if (!template) {
+      return;
+    }
+    lastFocused = card;
+    content.innerHTML = '';
+    content.appendChild(template.content.cloneNode(true));
+    modal.classList.add('open');
+    modal.removeAttribute('hidden');
+    document.body.style.overflow = 'hidden';
+    const closeBtn = modal.querySelector('.service-modal-close');
+    if (closeBtn) {
+      closeBtn.focus();
+    }
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.setAttribute('hidden', '');
+    document.body.style.overflow = '';
+    content.innerHTML = '';
+    if (lastFocused) {
+      lastFocused.focus();
+      lastFocused = null;
+    }
+  }
+
+  cards.forEach((card) => {
+    card.addEventListener('click', () => openModal(card));
+    card.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openModal(card);
+      }
+    });
+  });
+
+  modal.querySelectorAll('[data-close]').forEach((el) => {
+    el.addEventListener('click', closeModal);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && modal.classList.contains('open')) {
+      closeModal();
     }
   });
 }
@@ -550,11 +669,14 @@ document.addEventListener('DOMContentLoaded', () => {
   setHeaderState();
   setActiveNavLink();
   setupDailyTestimonials();
+  setupAllTestimonials();
   setupRevealAnimations();
   setupContactForm();
   setupDynamicDates();
   setupLightbox();
   setupHeroSlideshow();
+  setupLanguageToggle();
+  setupServiceModals();
 
   if (menuToggle) {
     menuToggle.addEventListener('click', () => toggleMenu());
